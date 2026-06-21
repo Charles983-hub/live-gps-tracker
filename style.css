@@ -1,0 +1,118 @@
+:root {
+    --bg-color: #0b0c10;
+    --card-color: #1f2833;
+    --accent-cyan: #66fcf1;
+    --accent-green: #45a29e;
+    --text-color: #c5c6c7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 550px;
+    background-color: var(--card-color);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.header-title {
+    font-size: 1.3rem;
+    text-align: center;
+    color: var(--accent-cyan);
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+#map-frame {
+    height: 350px;
+    width: 100%;
+    border-radius: 12px;
+    border: 2px solid var(--accent-green);
+    margin-bottom: 15px;
+    background-color: #111;
+    z-index: 1;
+}
+
+.action-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-start {
+    background-color: var(--accent-cyan);
+    color: #000000;
+}
+
+.btn-start:hover { 
+    background-color: #45e3db; 
+    transform: translateY(-1px);
+}
+
+.btn-clear {
+    background-color: #cc0000;
+    color: #ffffff;
+}
+
+.btn-clear:hover { 
+    background-color: #ff3333; 
+    transform: translateY(-1px);
+}
+
+.telemetry-box {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    border-left: 4px solid var(--accent-cyan);
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.label-json {
+    font-size: 0.75rem; 
+    margin-bottom: 5px; 
+    opacity: 0.6;
+}
+
+.json-viewer {
+    background-color: #000000;
+    padding: 12px;
+    border-radius: 8px;
+    max-height: 120px;
+    overflow-y: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    color: #88ff88;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
