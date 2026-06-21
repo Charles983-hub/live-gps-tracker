@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Live GPS Tracker</title>
+    
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0b0c10">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <h1 class="header-title">Sistem Navigasi Real-Time</h1>
+        
+        <div id="map-frame"></div>
+
+        <div class="action-grid">
+            <button class="btn-start" id="btnAction" onclick="initiateGpsTracking()">Lacak Lokasi Asli</button>
+            <button class="btn-clear" onclick="clearGpsDatabase()">Reset Sistem</button>
+        </div>
+
+        <div class="telemetry-box" id="telemetryData">
+            <strong>Sistem Status:</strong> Menunggu aktivasi modul GPS hardware perangkat Anda.
+        </div>
+
+        <p class="label-json">Buffer Riwayat Log (Format JSON):</p>
+        <div class="json-viewer" id="jsonStream">[]</div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <script src="js/app.js"></script>
+</body>
+</html>
